@@ -1,0 +1,67 @@
+name: 🧪 Quality Check Pipeline
+
+on:
+  push:
+    branches: [master, develop]
+  pull_request:
+    branches: [master]
+
+jobs:
+  pre-push-checks:
+    name: 🚀 Pre-Push Validation
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: test_gameone
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - name: 📦 Checkout code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: 📥 Install dependencies
+        run: bun install --frozen-lockfile
+
+      - name: 🗄️ Setup test database
+        run: |
+          # Generate Prisma client
+          bunx prisma generate
+          # Push schema to test database (creates tables without migrations)
+          bunx prisma db push --force-reset
+        env:
+          DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/test_gameone"
+          DIRECT_URL: "postgresql://postgres:postgres@localhost:5432/test_gameone"
+
+      - name: 🚀 Run comprehensive pre-push checks
+        run: bun run pre-push --skip-git
+        env:
+          CI: true
+          DATABASE_URL: "postgresql://postgres:postgres@localhost:5432/test_gameone"
+          DIRECT_URL: "postgresql://postgres:postgres@localhost:5432/test_gameone"
+
+      - name: 📊 Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: |
+            coverage/
+            test-results/
+          retention-days: 30

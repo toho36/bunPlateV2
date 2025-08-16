@@ -1,0 +1,34 @@
+name: 🤖 Auto-Merge PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: [master]
+
+permissions:
+  contents: write
+  pull-requests: write
+  checks: read
+
+jobs:
+  enable-auto-merge:
+    name: 🤖 Enable Auto-Merge
+    runs-on: ubuntu-latest
+    if: >
+      !github.event.pull_request.draft &&
+      (github.event.pull_request.user.login == github.repository_owner || 
+       contains(github.event.pull_request.labels.*.name, 'auto-merge'))
+
+    steps:
+      - name: 🤖 Enable auto-merge
+        uses: peter-evans/enable-pull-request-automerge@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          pull-request-number: ${{ github.event.pull_request.number }}
+          merge-method: squash
+
+      - name: ✅ Auto-merge enabled
+        run: |
+          echo "🤖 Auto-merge has been enabled for this PR"
+          echo "🎉 The PR will automatically merge when all required checks pass"
+          echo "📋 Required checks: Pre-Push Validation (includes all quality checks + build)"
