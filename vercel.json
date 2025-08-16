@@ -14,7 +14,7 @@
   },
   "env": {
     "NODE_ENV": "production",
-    "NEXT_PUBLIC_APP_NAME": "GameOne",
+    "NEXT_PUBLIC_APP_NAME": "YourAppName",
     "PRISMA_DEBUG": "false",
     "DATABASE_DEBUG": "false"
   },

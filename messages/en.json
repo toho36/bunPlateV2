@@ -1,6 +1,6 @@
 {
   "HomePage": {
-    "title": "Welcome to GameOne",
+    "title": "Welcome to YourAppName",
     "description": "The ultimate event management platform for modern teams. Create, manage, and track events with ease.",
     "getStarted": "Get Started",
     "learnMore": "Learn More",
@@ -8,8 +8,8 @@
     "readyToManage": "Ready to manage your events and projects?",
     "goToDashboard": "Go to Dashboard",
     "getStartedToday": "Get Started Today",
-    "joinThousands": "Join thousands of users managing their events with GameOne",
-    "whyChoose": "Why Choose GameOne?",
+    "joinThousands": "Join thousands of users managing their events with YourAppName",
+    "whyChoose": "Why Choose YourAppName?",
     "powerfulTools": "Powerful event management tools designed for modern teams",
     "eventManagement": "Event Management",
     "eventManagementDesc": "Create and manage events with our intuitive tools. From small meetups to large conferences.",
@@ -18,7 +18,7 @@
     "analytics": "Analytics",
     "analyticsDesc": "Comprehensive insights and reporting to help you understand your events and attendees better.",
     "readyToStart": "Ready to Get Started?",
-    "trustGameOne": "Join thousands of users who trust GameOne for their event management needs.",
+    "trustYourAppName": "Join thousands of users who trust YourAppName for their event management needs.",
     "activeUsers": "Active Users",
     "eventsCreated": "Events Created",
     "uptime": "Uptime",

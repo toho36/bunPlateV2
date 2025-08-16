@@ -151,26 +151,26 @@ async function main() {
     console.log(`✅ Created/updated role: ${role.displayName}`);
   }
 
-  // Create default bank accounts for Slovak banking
+  // Create default bank accounts (example data - replace with your banking details)
   const defaultBankAccounts = [
     {
-      name: "Primary Account - Tatra Banka",
-      bankName: "Tatra Banka",
+      name: "Primary Account - Your Bank",
+      bankName: "Your Bank Name",
       accountNumber: "1234567890",
       bankCode: "1100",
-      iban: "SK89 1100 0000 0012 3456 7890",
-      swift: "TATRSKBX",
+      iban: "US12 3456 7890 1234 5678 90",
+      swift: "YOURBANK",
       isDefault: true,
       isActive: true,
       qrCodeEnabled: true,
     },
     {
-      name: "Secondary Account - Slovenska Sporitelna",
-      bankName: "Slovenská sporiteľňa",
+      name: "Secondary Account - Another Bank",
+      bankName: "Another Bank Name",
       accountNumber: "0987654321",
       bankCode: "0900",
-      iban: "SK31 0900 0000 0000 9876 5432",
-      swift: "GIBASKBX",
+      iban: "US09 8765 4321 0987 6543 21",
+      swift: "ANOTHERB",
       isDefault: false,
       isActive: true,
       qrCodeEnabled: true,
@@ -190,7 +190,7 @@ async function main() {
   const defaultConfigs = [
     {
       key: "app.name",
-      value: "GameOne",
+      value: "YourAppName",
       description: "Application name",
       category: "general",
       isPublic: true,

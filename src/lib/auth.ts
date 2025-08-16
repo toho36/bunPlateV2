@@ -18,7 +18,7 @@ export function isLocalEnvironment(): boolean {
 export function getBaseUrl(): string {
   if (typeof window !== "undefined") {
     // Client-side
-    return isLocalEnvironment() ? "http://localhost:3000" : "https://gameonebaby.vercel.app";
+    return isLocalEnvironment() ? "http://localhost:3000" : "https://your-app.vercel.app";
   }
   // Server-side
   return process.env["VERCEL_URL"]
@@ -33,8 +33,8 @@ export function getAuthConfig() {
   const baseUrl = getBaseUrl();
 
   return {
-    authUrl: process.env["NEXT_PUBLIC_KINDE_AUTH_URL"] ?? "https://gameone.kinde.com",
-    clientId: process.env["NEXT_PUBLIC_KINDE_CLIENT_ID"] ?? "f5a3fab0fe644cf080282bcd90979fe4",
+    authUrl: process.env["NEXT_PUBLIC_KINDE_AUTH_URL"] ?? "https://your-domain.kinde.com",
+    clientId: process.env["NEXT_PUBLIC_KINDE_CLIENT_ID"] ?? "your-kinde-client-id",
     logoutUrl: process.env["NEXT_PUBLIC_KINDE_LOGOUT_URL"] ?? baseUrl,
     redirectUrl: process.env["NEXT_PUBLIC_KINDE_REDIRECT_URL"] ?? `${baseUrl}/dashboard`,
     baseUrl,
@@ -88,12 +88,12 @@ export function isProductionRequest(request: NextRequest): boolean {
 export function getKindeConfigForRequest(request: NextRequest) {
   const isProduction = isProductionRequest(request);
   const baseUrl = isProduction
-    ? `https://${process.env["VERCEL_URL"] ?? "gameonebaby.vercel.app"}`
+    ? `https://${process.env["VERCEL_URL"] ?? "your-app.vercel.app"}`
     : "http://localhost:3000";
 
   return {
-    authUrl: process.env["NEXT_PUBLIC_KINDE_AUTH_URL"] ?? "https://gameone.kinde.com",
-    clientId: process.env["NEXT_PUBLIC_KINDE_CLIENT_ID"] ?? "f5a3fab0fe644cf080282bcd90979fe4",
+    authUrl: process.env["NEXT_PUBLIC_KINDE_AUTH_URL"] ?? "https://your-domain.kinde.com",
+    clientId: process.env["NEXT_PUBLIC_KINDE_CLIENT_ID"] ?? "your-kinde-client-id",
     logoutUrl: isProduction ? baseUrl : "http://localhost:3000",
     redirectUrl: isProduction ? `${baseUrl}/dashboard` : "http://localhost:3000/dashboard",
     baseUrl,

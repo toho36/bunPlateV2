@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "GameOne - Event Management Platform",
+  title: "YourAppName - Modern Full-Stack Template",
   description:
-    "The ultimate event management platform for modern teams. Create, manage, and track events with ease.",
+    "A modern, production-ready full-stack template built with Next.js, Kinde Auth, and PostgreSQL.",
 };
 
 interface LocaleLayoutProps {

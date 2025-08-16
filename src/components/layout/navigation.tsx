@@ -23,7 +23,7 @@ export function Navigation({ currentLocale }: NavigationProps) {
           <div className="flex items-center">
             <Link href="/" className="flex items-center gap-2">
               <div className="size-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600" />
-              <span className="text-xl font-bold text-gray-900">GameOne</span>
+              <span className="text-xl font-bold text-gray-900">YourAppName</span>
             </Link>
           </div>
 

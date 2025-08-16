@@ -149,7 +149,7 @@ describe('Translation files', () => {
 
   describe('Specific translation content', () => {
     it('has appropriate Czech translations', () => {
-      expect(csMessages.HomePage.title).toContain('GameOne')
+      expect(csMessages.HomePage.title).toContain('YourAppName')
       expect(csMessages.Auth.signIn).toBe('Přihlásit se')
       expect(csMessages.Auth.signUp).toBe('Registrovat se')
       expect(csMessages.Navigation.home).toBe('Domů')
@@ -157,9 +157,9 @@ describe('Translation files', () => {
     })
 
     it('maintains consistent terminology', () => {
-      // Check that "GameOne" brand name is consistent
-      expect(enMessages.HomePage.title).toContain('GameOne')
-      expect(csMessages.HomePage.title).toContain('GameOne')
+      // Check that "YourAppName" brand name is consistent
+      expect(enMessages.HomePage.title).toContain('YourAppName')
+      expect(csMessages.HomePage.title).toContain('YourAppName')
     })
   })
 })

@@ -1,6 +1,6 @@
 {
   "HomePage": {
-    "title": "Vítejte v GameOne",
+    "title": "Vítejte v YourAppName",
     "description": "Ultimátní platforma pro správu událostí pro moderní týmy. Vytvářejte, spravujte a sledujte události s lehkostí.",
     "getStarted": "Začít",
     "learnMore": "Dozvědět se více",
@@ -8,8 +8,8 @@
     "readyToManage": "Jste připraveni spravovat své události a projekty?",
     "goToDashboard": "Přejít na nástěnku",
     "getStartedToday": "Začněte ještě dnes",
-    "joinThousands": "Připojte se k tisícům uživatelů spravujících své události s GameOne",
-    "whyChoose": "Proč zvolit GameOne?",
+    "joinThousands": "Připojte se k tisícům uživatelů spravujících své události s YourAppName",
+    "whyChoose": "Proč zvolit YourAppName?",
     "powerfulTools": "Výkonné nástroje pro správu událostí navržené pro moderní týmy",
     "eventManagement": "Správa událostí",
     "eventManagementDesc": "Vytvářejte a spravujte události pomocí našich intuitivních nástrojů. Od malých setkání po velké konference.",
@@ -18,7 +18,7 @@
     "analytics": "Analytika",
     "analyticsDesc": "Komplexní přehledy a reporty, které vám pomohou porozumět vašim událostem a účastníkům lépe.",
     "readyToStart": "Jste připraveni začít?",
-    "trustGameOne": "Připojte se k tisícům uživatelů, kteří důvěřují GameOne pro správu svých událostí.",
+    "trustYourAppName": "Připojte se k tisícům uživatelů, kteří důvěřují YourAppName pro správu svých událostí.",
     "activeUsers": "Aktivní uživatelé",
     "eventsCreated": "Vytvořené události",
     "uptime": "Dostupnost",

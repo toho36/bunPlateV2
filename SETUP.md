@@ -1,7 +1,7 @@
-# 🚀 GameOne Template Setup Guide
+# 🚀 Bunplate Template Setup Guide
 
 This comprehensive guide will help you set up a new application using the
-GameOne template. This template includes authentication, payments,
+Bunplate template. This template includes authentication, payments,
 internationalization, CI/CD, and a robust database schema.
 
 ## 📋 Prerequisites
@@ -26,7 +26,7 @@ cd my-new-app
 rm -rf .git
 git init
 git add .
-git commit -m "Initial commit from GameOne template"
+git commit -m "Initial commit from Bunplate template"
 
 # Add your remote repository
 git remote add origin <your-new-repo-url>
